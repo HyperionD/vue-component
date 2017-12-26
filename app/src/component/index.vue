@@ -47,6 +47,11 @@
             <base-badge class="badge-test" content="100"><div>大于99</div></base-badge>
             <base-badge class="badge-test" content="10">小于99</base-badge>
         </div>
+
+        <div class="component">
+            <base-button class="button-test">按钮</base-button>
+            <base-button class="button-test" @click="hello" type="text">文字按钮</base-button>
+        </div>
     </div>
 </template>
 
@@ -56,6 +61,7 @@
     import ConfirmBox from "./ConfirmBox.vue";
     import Slider from "./Slider.vue";
     import BaseBadge from "./BaseBadge.vue";
+    import BaseButton from "./BaseButton.vue";
 
     export default {
         data: function () {
@@ -64,7 +70,7 @@
                 imageList: ["static/1.jpg", "static/2.jpg", "static/3.jpg", "static/4.jpg"]
             };
         },
-        components: {ContextMenu, PopMenu, ConfirmBox, Slider, BaseBadge},
+        components: {ContextMenu, PopMenu, ConfirmBox, Slider, BaseBadge, BaseButton},
         mounted: function () {
             this.context = document.querySelector("#context-test");
         },
@@ -116,6 +122,10 @@
         width: 100px;
         height: 30px;
         background-color: #bdbdbd;
+        margin: 20px;
+    }
+
+    .button-test {
         margin: 20px;
     }
 </style>

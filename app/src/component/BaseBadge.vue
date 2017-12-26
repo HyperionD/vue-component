@@ -53,7 +53,9 @@
     }
 
     .badge {
-        padding: 5px 5px;
+        min-width: 15px;
+        min-height: 15px;
+        padding: 2px 2px;
         border-radius: 15px;
         background-color: #66b0ff;
         position: absolute;
