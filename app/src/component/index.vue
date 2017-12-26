@@ -42,6 +42,11 @@
         <div class="component slider-test">
             <slider :imageList="imageList"></slider>
         </div>
+
+        <div class="component">
+            <base-badge class="badge-test" content="100"><div>大于99</div></base-badge>
+            <base-badge class="badge-test" content="10">小于99</base-badge>
+        </div>
     </div>
 </template>
 
@@ -50,6 +55,7 @@
     import PopMenu from "./PopMenu.vue";
     import ConfirmBox from "./ConfirmBox.vue";
     import Slider from "./Slider.vue";
+    import BaseBadge from "./BaseBadge.vue";
 
     export default {
         data: function () {
@@ -58,7 +64,7 @@
                 imageList: ["static/1.jpg", "static/2.jpg", "static/3.jpg", "static/4.jpg"]
             };
         },
-        components: {ContextMenu, PopMenu, ConfirmBox, Slider},
+        components: {ContextMenu, PopMenu, ConfirmBox, Slider, BaseBadge},
         mounted: function () {
             this.context = document.querySelector("#context-test");
         },
@@ -104,5 +110,12 @@
 
     .slider-test {
         width: 100%;
+    }
+
+    .badge-test {
+        width: 100px;
+        height: 30px;
+        background-color: #bdbdbd;
+        margin: 20px;
     }
 </style>
