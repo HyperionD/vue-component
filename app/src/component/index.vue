@@ -15,18 +15,21 @@
         <div class="component">
             <p>弹出菜单</p>
             <div id="popmenu-test">
-                <pop-menu text="File">
-                    <p>New</p>
+                <pop-menu text="File" direction="bottom" :triangle="false">
+                    <p @click="hello">New</p>
                     <pop-menu text="Save">
                         <p>Save as ...</p>
                         <pop-menu text="Export">
                             <p>Export to html</p>
-                            <p>Export to pdf</p>
+                            <p @click="hello">Export to pdf</p>
+                            <pop-menu text="Test">
+                                <p>Test Pop</p>
+                            </pop-menu>
                         </pop-menu>
                     </pop-menu>
                     <p>Exit</p>
                 </pop-menu>
-                <pop-menu text="Edit">
+                <pop-menu text="Edit" direction="bottom" :triangle="false">
                     <p>Modify</p>
                     <p>Update</p>
                 </pop-menu>
