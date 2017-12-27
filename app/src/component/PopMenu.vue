@@ -52,7 +52,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .popmenu {
         cursor: pointer;
     }

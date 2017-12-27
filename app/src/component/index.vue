@@ -52,6 +52,29 @@
             <base-button class="button-test">按钮</base-button>
             <base-button class="button-test" @click="hello" type="text">文字按钮</base-button>
         </div>
+
+        <div class="component" id="tooltip">
+            <tool-tip content="ToolTip提示-上">
+                <div class="tooltip-test">上方提示</div>
+            </tool-tip>
+
+            <tool-tip content="ToolTip提示-右" position="right">
+                <div class="tooltip-test">右侧提示</div>
+            </tool-tip>
+
+            <tool-tip content="ToolTip提示-下" position="bottom">
+                <div class="tooltip-test">下方提示</div>
+            </tool-tip>
+
+            <tool-tip content="ToolTip提示-左" position="left">
+                <div class="tooltip-test">左侧提示</div>
+            </tool-tip>
+        </div>
+
+        <div class="component">
+            <p>zzzzzzzzzzzzzzzz</p>
+            <p>zzzzzzzzzzzzzzzz</p>
+        </div>
     </div>
 </template>
 
@@ -62,6 +85,7 @@
     import Slider from "./Slider.vue";
     import BaseBadge from "./BaseBadge.vue";
     import BaseButton from "./BaseButton.vue";
+    import ToolTip from "./ToolTip.vue";
 
     export default {
         data: function () {
@@ -70,7 +94,7 @@
                 imageList: ["static/1.jpg", "static/2.jpg", "static/3.jpg", "static/4.jpg"]
             };
         },
-        components: {ContextMenu, PopMenu, ConfirmBox, Slider, BaseBadge, BaseButton},
+        components: {ContextMenu, PopMenu, ConfirmBox, Slider, BaseBadge, BaseButton, ToolTip},
         mounted: function () {
             this.context = document.querySelector("#context-test");
         },
@@ -127,5 +151,14 @@
 
     .button-test {
         margin: 20px;
+    }
+
+    #tooltip {
+        display: flex;
+    }
+
+    .tooltip-test {
+        padding: 10px;
+        border: 1px solid #bdbdbd;
     }
 </style>

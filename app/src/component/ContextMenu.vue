@@ -1,7 +1,7 @@
 <template>
     <transition name="fade">
         <!-- mousedown.stop 阻止事件传播, 点击弹出的菜单项不触发hideMenu事件, 而是触发菜单项绑定的事件 -->
-        <div v-show="show" class="contextmenu" :style="style" @click.stop @mousedown.stop ref="contextmenu">
+        <div v-show="show" class="contextmenu" :style="style" @mousedown.stop>
             <slot></slot>
         </div>
     </transition>
@@ -34,7 +34,7 @@
                     // 在其它位置点击鼠标隐藏菜单, 通过.stop 修饰符阻止传播到弹出菜单
                     document.addEventListener("mousedown", this.hideMenu);
                     // 点击菜单项目后隐藏菜单
-                    document.addEventListener("mouseup", this.hideMenu);
+                    document.addEventListener("click", this.hideMenu);
                 }
             },
             showMenu: function (e) {
@@ -46,12 +46,12 @@
                 // 在其它位置点击鼠标隐藏菜单, 通过.stop 修饰符阻止传播到弹出菜单
                 document.addEventListener("mousedown", this.hideMenu);
                 // 点击菜单项目后隐藏菜单
-                document.addEventListener("mouseup", this.hideMenu);
+                document.addEventListener("click", this.hideMenu);
             },
             hideMenu: function () {
                 this.show = false;
                 document.removeEventListener("mousedown", this.hideMenu);
-                document.removeEventListener("mouseup", this.hideMenu);
+                document.removeEventListener("click", this.hideMenu);
             }
         }
     }
