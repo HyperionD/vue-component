@@ -4541,7 +4541,8 @@ exports.default = {
             sliderContainerStyle: {},
             dotActiveList: [],
             currentIndex: 0,
-            timer: ""
+            invID: "",
+            timeID: ""
         };
     },
     props: {
@@ -4625,50 +4626,59 @@ exports.default = {
          * @param index 要跳转的图片索引, 从0开始
          */
         goto: function goto(index) {
-            this.$set(this.sliderContainerStyle, "left", "-" + this.imageWidth * index + "px");
-            this.$set(this.sliderContainerStyle, "transition", "left " + this.during + "ms");
-            // 跳转到最后额外添加的第一张图片时，将dotActiveList初始化
-            if (index === this.imageList.length) {
-                this.initDotActiveList();
-            } else {
-                for (var i = 0; i < this.dotActiveList.length; i++) {
-                    if (index === i) {
-                        this.dotActiveList[i] = true;
-                    } else {
-                        this.dotActiveList[i] = false;
+            var _this3 = this;
+
+            return new Promise(function (resolve) {
+                clearTimeout(_this3.timeID);
+                _this3.$set(_this3.sliderContainerStyle, "left", "-" + _this3.imageWidth * index + "px");
+                _this3.$set(_this3.sliderContainerStyle, "transition", "left " + _this3.during + "ms");
+                _this3.currentIndex = index;
+                if (index === _this3.imageList.length) {
+                    _this3.initDotActiveList();
+                } else {
+                    for (var i = 0; i < _this3.dotActiveList.length; i++) {
+                        if (index === i) {
+                            _this3.dotActiveList[i] = true;
+                        } else {
+                            _this3.dotActiveList[i] = false;
+                        }
                     }
                 }
-            }
-            this.currentIndex = index;
+                _this3.timeID = setTimeout(function () {
+                    resolve();
+                }, _this3.during);
+            });
         },
         clickDot: function clickDot(index) {
-            clearInterval(this.timer);
-            this.goto(index);
-            setTimeout(this.inv, this.during);
+            var _this4 = this;
+
+            clearInterval(this.invID);
+            this.goto(index).then(function () {
+                _this4.inv();
+            });
         },
         /**
          * 下一张图片
          */
         next: function next() {
-            var _this3 = this;
+            var _this5 = this;
 
             // 当下一张为第一张时，跳转到额外添加到最后的第一张图片，当图片跳转完成后，直接left=0切换到真正的第一张图片以达到无缝切换的效果
             if (this.currentIndex === this.imageList.length - 1) {
-                this.goto(this.imageList.length);
-                setTimeout(function () {
-                    _this3.currentIndex = 0;
-                    _this3.$set(_this3.sliderContainerStyle, "left", "0px");
-                    _this3.$set(_this3.sliderContainerStyle, "transition", "left 0s");
-                }, this.during);
+                this.goto(this.imageList.length).then(function () {
+                    _this5.currentIndex = 0;
+                    _this5.$set(_this5.sliderContainerStyle, "left", "0px");
+                    _this5.$set(_this5.sliderContainerStyle, "transition", "left 0s");
+                });
             } else {
                 this.goto(this.currentIndex + 1);
             }
         },
         inv: function inv() {
-            var _this4 = this;
+            var _this6 = this;
 
-            this.timer = setInterval(function () {
-                _this4.next();
+            this.invID = setInterval(function () {
+                _this6.next();
             }, this.during + 1000);
         }
     }
