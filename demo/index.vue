@@ -2,29 +2,26 @@
     <div id="index">
         <div class="component">
             <div class="code">
-                <div class="code-item">
-                    <div>
-                        <span class="code-title">常规按钮</span>
+                <div class="source">
+                    <div class="code-item">
+                        <div>
+                            <span class="code-title">常规按钮</span>
+                        </div>
+                        <div class="code-content">
+                            <p>&ltsample-button&gtButton&lt/sample-button&gt</p>
+                        </div>
                     </div>
-                    <div class="code-content">
-                        <p>&ltsample-button&gtButton&lt/sample-button&gt</p>
+                    <div class="code-item">
+                        <div>
+                            <span class="code-title">文字按钮</span>
+                        </div>
+                        <div class="code-content">
+                            <p>&ltsample-button type="text"&gt文字按钮&lt/sample-button&gt</p>
+                        </div>
                     </div>
                 </div>
                 <div class="code-show">
                     <sample-button>Button</sample-button>
-                </div>
-            </div>
-
-            <div class="code">
-                <div class="code-item">
-                    <div>
-                        <span class="code-title">文字按钮</span>
-                    </div>
-                    <div class="code-content">
-                        <p>&ltsample-button type="text"&gt文字按钮&lt/sample-button&gt</p>
-                    </div>
-                </div>
-                <div class="code-show">
                     <sample-button type="text">文字按钮</sample-button>
                 </div>
             </div>
@@ -48,7 +45,6 @@
 
     .code {
         display: flex;
-        align-items: center;
         border: 1px solid #dfdfdf;
         margin: 10px;
     }
@@ -68,5 +64,11 @@
 
     .code-show {
         padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .code-show * {
+        margin: 10px;
     }
 </style>

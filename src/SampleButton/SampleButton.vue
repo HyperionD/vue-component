@@ -50,7 +50,6 @@
 
     .text:hover {
         color: #66b0ff;
-        /*border-bottom: 1px solid #66b0ff;*/
         text-decoration: underline;
     }
 </style>

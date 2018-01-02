@@ -1,6 +1,6 @@
 import path from "path";
 
-const root = path.resolve(__dirname, "app");
+const root = path.resolve(__dirname);
 const dist_dir = path.resolve(root, "demo/dist");
 const dist_js_filename = "bundle.js";
 const dist_js = path.resolve(dist_dir, dist_js_filename);

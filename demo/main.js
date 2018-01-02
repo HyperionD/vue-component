@@ -1,4 +1,4 @@
-import Vue from "../../node_modules/vue/dist/vue";
+import Vue from "../node_modules/vue/dist/vue";
 import sampleComponent from "../src/index";
 import index from "./index.vue";
 

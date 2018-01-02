@@ -4194,9 +4194,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
 
 exports.default = {
     data: function data() {
@@ -20834,7 +20831,7 @@ __WEBPACK_IMPORTED_MODULE_0__SampleButton_vue__["default"].install = function (V
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_SampleButton_vue__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_SampleButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_SampleButton_vue__);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_01f1d690_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_SampleButton_vue__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_31b4d626_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_SampleButton_vue__ = __webpack_require__(344);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -20851,18 +20848,18 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-01f1d690"
+var __vue_scopeId__ = "data-v-31b4d626"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_SampleButton_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_01f1d690_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_SampleButton_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_31b4d626_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_SampleButton_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "app/src/SampleButton/SampleButton.vue"
+Component.options.__file = "src/SampleButton/SampleButton.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -20871,9 +20868,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-01f1d690", Component.options)
+    hotAPI.createRecord("data-v-31b4d626", Component.options)
   } else {
-    hotAPI.reload("data-v-01f1d690", Component.options)
+    hotAPI.reload("data-v-31b4d626", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -20894,13 +20891,13 @@ var content = __webpack_require__(342);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(126)("14396a4c", content, false);
+var update = __webpack_require__(126)("43589002", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-01f1d690\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./SampleButton.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-01f1d690\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./SampleButton.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-31b4d626\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./SampleButton.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-31b4d626\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./SampleButton.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20918,7 +20915,7 @@ exports = module.exports = __webpack_require__(125)(undefined);
 
 
 // module
-exports.push([module.i, "\n.sample-button button[data-v-01f1d690] {\n    padding: 8px;\n    outline: none;\n    border: none;\n    cursor: pointer;\n    font-weight: bold;\n}\n.normal[data-v-01f1d690] {\n    background-color: #3395ff;\n    color: #fff;\n    border-radius: 2px;\n}\n.normal[data-v-01f1d690]:hover {\n    background-color: #66b0ff;\n}\n.text[data-v-01f1d690] {\n    background-color: transparent;\n    color: #3395ff;\n}\n.text[data-v-01f1d690]:hover {\n    color: #66b0ff;\n    /*border-bottom: 1px solid #66b0ff;*/\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, "\n.sample-button button[data-v-31b4d626] {\n    padding: 8px;\n    outline: none;\n    border: none;\n    cursor: pointer;\n    font-weight: bold;\n}\n.normal[data-v-31b4d626] {\n    background-color: #3395ff;\n    color: #fff;\n    border-radius: 2px;\n}\n.normal[data-v-31b4d626]:hover {\n    background-color: #66b0ff;\n}\n.text[data-v-31b4d626] {\n    background-color: transparent;\n    color: #3395ff;\n}\n.text[data-v-31b4d626]:hover {\n    color: #66b0ff;\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 
@@ -20981,7 +20978,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-01f1d690", esExports)
+    require("vue-hot-reload-api")      .rerender("data-v-31b4d626", esExports)
   }
 }
 
@@ -20993,7 +20990,7 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4b0f4162_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fccea98_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__ = __webpack_require__(348);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -21015,13 +21012,13 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4b0f4162_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fccea98_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "app/demo/index.vue"
+Component.options.__file = "demo/index.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -21030,9 +21027,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4b0f4162", Component.options)
+    hotAPI.createRecord("data-v-9fccea98", Component.options)
   } else {
-    hotAPI.reload("data-v-4b0f4162", Component.options)
+    hotAPI.reload("data-v-9fccea98", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21053,13 +21050,13 @@ var content = __webpack_require__(347);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(126)("a8acea80", content, false);
+var update = __webpack_require__(126)("79611f78", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b0f4162\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b0f4162\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./index.vue");
+   module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9fccea98\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./index.vue", function() {
+     var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9fccea98\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -21077,7 +21074,7 @@ exports = module.exports = __webpack_require__(125)(undefined);
 
 
 // module
-exports.push([module.i, "\n* {\n    margin: 0;\n    padding: 0;\n}\n.code {\n    display: flex;\n    align-items: center;\n    border: 1px solid #dfdfdf;\n    margin: 10px;\n}\n.code-item {\n    padding: 10px;\n    border-right: 1px solid #dfdfdf;\n}\n.code-title {\n    border-bottom: 1px solid #66b0ff;\n}\n.code-content {\n    margin-top: 10px;\n}\n.code-show {\n    padding: 10px;\n}\n", ""]);
+exports.push([module.i, "\n* {\n    margin: 0;\n    padding: 0;\n}\n.code {\n    display: flex;\n    border: 1px solid #dfdfdf;\n    margin: 10px;\n}\n.code-item {\n    padding: 10px;\n    border-right: 1px solid #dfdfdf;\n}\n.code-title {\n    border-bottom: 1px solid #66b0ff;\n}\n.code-content {\n    margin-top: 10px;\n}\n.code-show {\n    padding: 10px;\n    display: flex;\n    align-items: center;\n}\n.code-show * {\n    margin: 10px;\n}\n", ""]);
 
 // exports
 
@@ -21099,18 +21096,9 @@ var render = function() {
         _c(
           "div",
           { staticClass: "code-show" },
-          [_c("sample-button", [_vm._v("Button")])],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "code" }, [
-        _vm._m(1),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "code-show" },
           [
+            _c("sample-button", [_vm._v("Button")]),
+            _vm._v(" "),
             _c("sample-button", { attrs: { type: "text" } }, [
               _vm._v("文字按钮")
             ])
@@ -21126,27 +21114,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "code-item" }, [
-      _c("div", [
-        _c("span", { staticClass: "code-title" }, [_vm._v("常规按钮")])
+    return _c("div", { staticClass: "source" }, [
+      _c("div", { staticClass: "code-item" }, [
+        _c("div", [
+          _c("span", { staticClass: "code-title" }, [_vm._v("常规按钮")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "code-content" }, [
+          _c("p", [_vm._v("<sample-button>Button</sample-button>")])
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "code-content" }, [
-        _c("p", [_vm._v("<sample-button>Button</sample-button>")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "code-item" }, [
-      _c("div", [
-        _c("span", { staticClass: "code-title" }, [_vm._v("文字按钮")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "code-content" }, [
-        _c("p", [_vm._v('<sample-button type="text">文字按钮</sample-button>')])
+      _c("div", { staticClass: "code-item" }, [
+        _c("div", [
+          _c("span", { staticClass: "code-title" }, [_vm._v("文字按钮")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "code-content" }, [
+          _c("p", [
+            _vm._v('<sample-button type="text">文字按钮</sample-button>')
+          ])
+        ])
       ])
     ])
   }
@@ -21157,7 +21145,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4b0f4162", esExports)
+    require("vue-hot-reload-api")      .rerender("data-v-9fccea98", esExports)
   }
 }
 
