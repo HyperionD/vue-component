@@ -1,11 +1,12 @@
 <template>
-    <div class="base-button">
+    <div class="sample-button">
         <button @click="handleClick" :class="type"><slot></slot></button>
     </div>
 </template>
 
 <script>
     export default {
+        name: "sample-button",
         data: function () {
             return {}
         },
@@ -24,21 +25,22 @@
 </script>
 
 <style scoped>
-    .base-button button {
-        padding: 5px 5px;
+    .sample-button button {
+        padding: 8px;
         outline: none;
         border: none;
         cursor: pointer;
+        font-weight: bold;
     }
 
     .normal {
-        background-color: #66b0ff;
+        background-color: #3395ff;
         color: #fff;
-        border-radius: 5px;
+        border-radius: 2px;
     }
 
     .normal:hover {
-        background-color: #3395ff;
+        background-color: #66b0ff;
     }
 
     .text {
@@ -48,5 +50,7 @@
 
     .text:hover {
         color: #66b0ff;
+        /*border-bottom: 1px solid #66b0ff;*/
+        text-decoration: underline;
     }
 </style>
