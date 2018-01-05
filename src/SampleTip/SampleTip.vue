@@ -1,47 +1,41 @@
 <template>
-    <div class="tool-tip" @mouseover.stop="showTip" @mouseout.stop="hideTip" ref="toolTip">
-        <slot></slot>
-        <transition name="fade">
-            <div v-show="toolTipShow" class="tip" :class="position">{{ content }}</div>
-        </transition>
+    <div class="sample-tip" v-show="show" :class="direction">
+        <div class="tip-content">{{ text }}</div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "tool-tip",
+        name: "sample-tip",
         data: function () {
             return {
-                toolTipShow: false
+                show: false
             }
         },
         props: {
-            content: {
-                type: [String, Number],
-                required: true
-            },
-            position: {
-                default: "top"
-            }
+            text: "",
+            tipEl: null,
+            direction: ""
+        },
+        mounted: function () {
+            this.showTip();
         },
         methods: {
             showTip: function () {
-                this.toolTipShow = true;
+                this.tipEl.addEventListener("mouseover", () => {
+                    this.show = true;
+                });
+                this.tipEl.addEventListener("mouseout", this.hideTip);
             },
             hideTip: function () {
-                this.toolTipShow = false;
+                this.show = false;
             }
         }
     }
 </script>
 
 <style scoped>
-    .tool-tip {
-        position: relative;
-        width: fit-content;
-    }
-
-    .tip {
+    .sample-tip {
         position: absolute;
         background-color: #303133;
         color: #fff;
@@ -50,6 +44,8 @@
         font-size: smaller;
         white-space: nowrap;
         z-index: 1;
+        width: fit-content;
+        margin: 0;
     }
 
     .top {
@@ -71,7 +67,7 @@
 
     .right {
         left: 100%;
-        top: 0;
+        top: -50%;
         margin-left: 5px;
     }
 
@@ -106,7 +102,7 @@
 
     .left {
         right: 100%;
-        top: 0;
+        top: -50%;
         margin-right: 5px;
     }
 
@@ -120,13 +116,5 @@
         position: absolute;
         left: 100%;
         top: 25%;
-    }
-
-    .fade-enter, .fade-leave-to {
-        opacity: 0;
-    }
-
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
     }
 </style>
